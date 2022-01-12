@@ -1,0 +1,23 @@
+<%- include("partials/header") -%>
+
+<div class="addblog">
+
+    <form class="addblog-form" action="/addblog" method="post">
+        
+        <h3 class="h-addblog">Heading</h3>
+        <input type="text" name="in" class="in-addblog">
+        <h3 class="c-addblog">Content</h3>
+        <textarea rows="10" cols="10" type="text" name="postbody"  class="post" autocomplete="off"></textarea>
+        <button type="submit" class="button-71">Publish</button>
+        
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $('.post').each(function(){
+this.contentEditable = true;
+});
+</script>
+
+<%- include("partials/footer") -%>
